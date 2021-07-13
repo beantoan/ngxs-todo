@@ -1,0 +1,11 @@
+<h3>Add new task</h3>
+
+<form class="w-100" fxLayout="column" fxLayoutAlign="center end" [formGroup]="form">
+  <mat-form-field class="w-100" appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+
+  <button [disabled]="!form.controls.title.value" mat-raised-button color="primary" (click)="addTodo()">Save</button>
+</form>
+

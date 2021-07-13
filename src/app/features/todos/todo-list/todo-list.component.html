@@ -1,0 +1,6 @@
+<mat-form-field class="w-100 mb-2" appearance="fill">
+  <mat-label>Filter todo</mat-label>
+  <input matInput [(ngModel)]="filterValue" (ngModelChange)="onChange($event)">
+</mat-form-field>
+
+<mat-card *ngFor="let todo of todos$ | async" class="mb-2">{{todo.title}}</mat-card>
